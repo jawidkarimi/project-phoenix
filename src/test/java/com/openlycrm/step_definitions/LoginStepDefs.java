@@ -1,7 +1,7 @@
-package com.project_name.step_definitions;
+package com.openlycrm.step_definitions;
 
-import com.project_name.pages.LoginPage;
-import com.project_name.utilities.ConfigurationReader;
+import com.openlycrm.pages.LoginPage;
+import com.openlycrm.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 public class LoginStepDefs {
 
