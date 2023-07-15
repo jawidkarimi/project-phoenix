@@ -1,4 +1,4 @@
-package com.project_name.utilities;
+package com.openlycrm.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
