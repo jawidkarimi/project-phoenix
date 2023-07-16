@@ -14,18 +14,18 @@ public class LoginStepDefs {
     @Given("the user logged in as {string}")
     public void the_user_logged_in_as(String userType) {
         //based on input enter that user information
-        String username ="";
-        String password ="";
+        String username="";
+        String password="";
 
-        if(userType.equalsIgnoreCase("HR1")){
-            username = ConfigurationReader.getProperty("hr1_username");
-            password = ConfigurationReader.getProperty("hr1_password");
-        }else if(userType.equalsIgnoreCase("HR2")){
-            username = ConfigurationReader.getProperty("hr2_username");
-            password = ConfigurationReader.getProperty("hr2_password");
-        }else if(userType.equalsIgnoreCase("HR3")){
-            username = ConfigurationReader.getProperty("hr3_username");
-            password = ConfigurationReader.getProperty("hr3_password");
+        if(userType.equalsIgnoreCase("hr")){
+            username = ConfigurationReader.getProperty("hr_username");
+            password = ConfigurationReader.getProperty("hr_password");
+        }else if(userType.equalsIgnoreCase("hd")){
+            username = ConfigurationReader.getProperty("hd_username");
+            password = ConfigurationReader.getProperty("hd_password");
+        }else if(userType.equalsIgnoreCase("mk")){
+            username = ConfigurationReader.getProperty("mk_username");
+            password = ConfigurationReader.getProperty("mk_password");
         }
         //send username and password and login
         new LoginPage().login(username,password);
