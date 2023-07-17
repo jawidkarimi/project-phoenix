@@ -19,6 +19,7 @@ import java.util.List;
 
 public abstract class BasePage {
 
+    /*
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
 
@@ -39,13 +40,15 @@ public abstract class BasePage {
     public WebElement myUser;
 
 
+     */
+
 //-----------------------------------------------------------------------
 
 
     @FindBy(id = "user-name")
     public WebElement profileName;
 
-    @FindBy (className = "menu-popup-item-text") // TODO- redo locator
+    @FindBy (className = "menu-popup-item-text")
     public List<WebElement> profileOptions;
 
     @FindBy (xpath = "//span[normalize-space()='Log out']")
@@ -123,7 +126,7 @@ public abstract class BasePage {
 //-----------------------------------------------------------------------
 
 
-
+    /*
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -131,7 +134,7 @@ public abstract class BasePage {
 
     /**
      * @return page name, for example: Dashboard
-     */
+
     public String getPageSubTitle() {
         //ant time we are verifying page name, or page subtitle, loader mask appears
         waitUntilLoaderScreenDisappear();
@@ -145,6 +148,8 @@ public abstract class BasePage {
      * NoSuchElementException will be handled  bu try/catch block
      * Thus, we can continue in any case.
      */
+
+    /*
     public void waitUntilLoaderScreenDisappear() {
         try {
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
@@ -165,6 +170,8 @@ public abstract class BasePage {
      * @param tab
      * @param module
      */
+
+    /*
     public void navigateToModule(String tab, String module) {
         String tabLocator = "//span[normalize-space()='" + tab + "' and contains(@class, 'title title-level-1')]";
         String moduleLocator = "//span[normalize-space()='" + module + "' and contains(@class, 'title title-level-2')]";
@@ -185,5 +192,9 @@ public abstract class BasePage {
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
+     */
+
+
 
 }
