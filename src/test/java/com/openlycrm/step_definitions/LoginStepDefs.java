@@ -17,4 +17,5 @@ public class LoginStepDefs {
     public void the_user_logged_in_as(String userType) {
         loginPage.login(userType);
     }
+
 }

@@ -15,7 +15,6 @@ public abstract class BasePage {
     @FindBy (xpath = "//span[normalize-space()='Log out']")
     public WebElement logoutButton;
 
-    @FindBy (xpath = "//span[text()='Message']")
     public WebElement messageButton;
 
     @FindBy (xpath = "//span[text()='The message title is not specified']")
@@ -80,5 +79,7 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//span[normalize-space()='My Profile']")
     public WebElement myProfileButton;
+
+
 
 }
