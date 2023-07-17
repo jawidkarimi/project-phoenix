@@ -1,6 +1,7 @@
 package com.openlycrm.pages;
 
 
+import com.openlycrm.utilities.ConfigurationReader;
 import com.openlycrm.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,5 +31,31 @@ public class LoginPage extends BasePage{
         login.click();
         // verification that we logged
     }
+
+    public void login() {
+        userName.sendKeys(ConfigurationReader.getProperty("hr_username"));
+        password.sendKeys(ConfigurationReader.getProperty("hr_password"));
+        login.click();
+    }
+
+    public void login(String userType) {
+
+        String username="";
+        String password="";
+
+        if(userType.equalsIgnoreCase("hr")){
+            username = ConfigurationReader.getProperty("hr_username");
+            password = ConfigurationReader.getProperty("hr_password");
+        }else if(userType.equalsIgnoreCase("hd")){
+            username = ConfigurationReader.getProperty("hd_username");
+            password = ConfigurationReader.getProperty("hd_password");
+        }else if(userType.equalsIgnoreCase("mk")){
+            username = ConfigurationReader.getProperty("mk_username");
+            password = ConfigurationReader.getProperty("mk_password");
+        }
+        //send username and password and login
+        new LoginPage().login(username,password);
+    }
+
 
 }
