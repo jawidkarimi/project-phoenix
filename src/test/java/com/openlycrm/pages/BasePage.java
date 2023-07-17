@@ -39,14 +39,17 @@ public abstract class BasePage {
     public WebElement myUser;
 
 
-
+//-----------------------------------------------------------------------
 
 
     @FindBy(id = "user-name")
     public WebElement profileName;
 
-    @FindBy (className = "menu-popup-item-text")
+    @FindBy (className = "menu-popup-item-text") // TODO- redo locator
     public List<WebElement> profileOptions;
+
+    @FindBy (xpath = "//span[normalize-space()='Log out']")
+    public WebElement logoutButton;
 
     @FindBy (xpath = "//span[contains(text(),'Message')]")
     public WebElement messageButton;
@@ -57,10 +60,10 @@ public abstract class BasePage {
     @FindBy (xpath = "//span[text()='Please specify at least one person.']")
     public WebElement specifyOnePersonError;
 
-    @FindBy (xpath = "//span[text()='All employees']")
-    public WebElement allEmployees;
+    @FindBy (xpath = "//span[@class='feed-add-post-del-but']")
+    public WebElement closeAllEmployees;
 
-    @FindBy (id = "bx-b-uploadfile-blogPostForm")
+    @FindBy (xpath = "//span[@id='bx-b-uploadfile-blogPostForm']")
     public WebElement uploadFilesButton;
 
     @FindBy (xpath = "//input[@name='bxu_files[]']")
@@ -72,17 +75,17 @@ public abstract class BasePage {
     @FindBy (xpath = "//span[normalize-space()='Employees']")
     public WebElement employeesPageButton;
 
-    @FindBy (className = "main-buttons")
+    @FindBy (className = "main-buttons-item-text-title")
     public List<WebElement> employeesModule;
 
     @FindBy (id = "pagetitle")
     public WebElement companyStructureText;
 
-    @FindBy(xpath = "//*[@id='feed-add-post-form-tab']")
-    public WebElement menuBar;
+    @FindBy(xpath = "//*[@id='feed-add-post-form-tab']")  // TODO- redo locator
+    public List<WebElement> activityStreamMenuBar;
 
     @FindBy(id = "feed-add-post-form-link-text")
-    public WebElement moreLinkText;
+    public WebElement moreTab;
 
     @FindBy(xpath = "//span[contains(text(),'Poll')]")
     public WebElement pollButton;
@@ -90,7 +93,7 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[@class='feed-add-info-text']")
     public WebElement questionTextError;
 
-    @FindBy(xpath = "//span[contains(text(),'has no answers')]")
+    @FindBy(xpath = "//span[contains(text(),'has no answers')]") //TODO- maybe concatenate?
     public WebElement questionHasNoAnswersError;
 
     @FindBy(id = "multi_0")
@@ -108,13 +111,16 @@ public abstract class BasePage {
     @FindBy(id = "blog-submit-button-cancel")
     public WebElement cancelButton;
 
-    @FindBy(id = "bx-destination-tag")
+    @FindBy(xpath = "//a[text()='Add more']")
     public WebElement addMoreButton;
 
+    @FindBy(xpath = "//span[normalize-space()='My Profile']")
+    public WebElement myProfileButton;
 
 
 
 
+//-----------------------------------------------------------------------
 
 
 
