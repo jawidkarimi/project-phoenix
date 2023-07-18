@@ -5,7 +5,7 @@ Feature: Employees Page Functions
 
     Given the user is logged in
     When the user navigates to the Employee menu
-    Then the user can see the "Company Structure" header
+    Then the user can see the Company Structure header
 
   Scenario: HR User Accesses Employee Menu and Performs HR Functions
     Given the user is logged in

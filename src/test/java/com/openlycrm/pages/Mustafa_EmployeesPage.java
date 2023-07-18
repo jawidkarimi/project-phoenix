@@ -13,9 +13,6 @@ public class Mustafa_EmployeesPage extends BasePage{
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    String user= ConfigurationReader.getProperty("hr_username");
-    String pass = ConfigurationReader.getProperty("hr_password");
-    String allAccessDepartmentType = ConfigurationReader.getProperty("hr_username").substring(0, 1);
 
     @FindBy(xpath = "(//a[@title='Employees'])[1]")
     public WebElement employeesMenuItem;
@@ -36,9 +33,10 @@ public class Mustafa_EmployeesPage extends BasePage{
     public WebElement addedDepartmentName;
 
 
+
     public void verifyAddDepartmentButtonVisibility(String userType) {
-        userType = user;
-        boolean isHR = userType.toLowerCase().startsWith("hr");
+
+        boolean isHR = ConfigurationReader.getProperty("hr_username").toLowerCase().startsWith("hr");
 
         if (isHR) {
             Assert.assertTrue("Add Department button is not displayed for HR user.",
