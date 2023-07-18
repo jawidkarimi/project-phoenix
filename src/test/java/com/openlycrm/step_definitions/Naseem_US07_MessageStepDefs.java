@@ -10,15 +10,14 @@ public class Naseem_US07_MessageStepDefs {
 
     LoginPage loginPage = new LoginPage();
 
-    @Given("user Verify seen Employees button after LogIn")
+    @Given("user Verify seen Employees button after login")
     public void userVerifySeenEmployeesButtonAfterLogIn() {
     Driver.getDriver().findElement(By.xpath("(//a[@class='menu-item-link'])[10]"));
 
 
     }
-    @Then("user Verify the  view the following {eight} modules in the Employees page.")
-    public void userVerifyTheViewTheFollowingModulesInTheEmployeesPage(int eight) {
-
+    @Then("user Verify the  view the following {} modules in the Employees page.")
+    public void userVerifyTheViewTheFollowingModulesInTheEmployeesPage(int integer) {
 
         Driver.getDriver().findElement(By.xpath("//div[@class='main-buttons-inner-container']"));
 
@@ -60,5 +59,7 @@ public class Naseem_US07_MessageStepDefs {
     }
 
 
-
+    @Given("Verify that user view the Company Structure by default after clicking the Employees Module")
+    public void verifyThatUserViewTheCompanyStructureByDefaultAfterClickingTheEmployeesModule() {
+    }
 }
