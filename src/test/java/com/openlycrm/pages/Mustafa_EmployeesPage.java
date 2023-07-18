@@ -33,7 +33,6 @@ public class Mustafa_EmployeesPage extends BasePage{
     public WebElement addedDepartmentName;
 
 
-
     public void verifyAddDepartmentButtonVisibility(String userType) {
 
         boolean isHR = ConfigurationReader.getProperty("hr_username").toLowerCase().startsWith("hr");
