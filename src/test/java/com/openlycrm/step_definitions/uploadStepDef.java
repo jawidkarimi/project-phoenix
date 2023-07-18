@@ -35,7 +35,7 @@ public class uploadStepDef {
     @When("user upload the file")
     public void user_upload_the_file() {
 
-        messagePage.uploadFilesAndImagesLink.sendKeys("/Users/jawidkarimi/Desktop/Java IQ PDF.pdf");
+        messagePage.uploadFilesAndImagesLink.sendKeys("/Users/jawidkarimi/IdeaProjects/project-template/src/test/resources/fileforUploadTest.txt");
 
     }
 
@@ -52,7 +52,7 @@ public class uploadStepDef {
 
     @Then("user sees the same file is uploaded")
     public void user_sees_the_same_file_is_uploaded() {
-        String expectedLoadedFileName = "Java IQ PDF";
+        String expectedLoadedFileName = "fileforUploadTest";
         String actualLoadedFileName = messagePage.loadedFile.getText();
 
         System.out.println("expectedLoadedFileName = " + expectedLoadedFileName);
