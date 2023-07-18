@@ -32,7 +32,6 @@ public class Mustafa_EmployeesPage extends BasePage{
     @FindBy(xpath = "(//div[@class='structure-dept-title-text'])[2]")
     public WebElement addedDepartmentName;
 
-
     public void verifyAddDepartmentButtonVisibility(String userType) {
 
         boolean isHR = ConfigurationReader.getProperty("hr_username").toLowerCase().startsWith("hr");

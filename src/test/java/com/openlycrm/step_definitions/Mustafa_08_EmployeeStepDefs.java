@@ -42,4 +42,5 @@ public class Mustafa_08_EmployeeStepDefs extends BasePage {
 
         employeesPage.addDepartmentFunction(ConfigurationReader.getProperty("hr_username").substring(0, 1));
     }
+
 }
