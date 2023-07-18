@@ -24,7 +24,7 @@ public class Mustafa_08_EmployeeStepDefs extends BasePage {
         employeesPage.employeesMenuItem.click();
     }
     @Then("the user can see the Company Structure header")
-    public void the_user_can_see_the_header(String string) {
+    public void the_user_can_see_the_header() {
 
         Assert.assertTrue(employeesPage.companyStructureTitle.isDisplayed());
     }
