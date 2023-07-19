@@ -23,7 +23,7 @@ public class Khalil_UploadFilesAndPicturesPage extends BasePage {
     @FindBy(css = "span.del-but")
     public WebElement theXIcon;
 
-    @FindBy(xpath = "//*[.='floppydisk (1).jpg']")
+    @FindBy(xpath = "//*[.='Cydeo_logo']")
     public WebElement uploadedFileOrImageUnderTheTextBox;
 
     @FindBy(xpath = "//img[contains(@id,'bxid')]")

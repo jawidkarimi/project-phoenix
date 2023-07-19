@@ -12,7 +12,7 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     Khalil_UploadFilesAndPicturesPage uploadFilesAndPicturesPage = new Khalil_UploadFilesAndPicturesPage();
 
     String projectPath = System.getProperty("user.dir");
-    String filePathtxt ="src/test/resources/filesToUpload/floppydisk.jpg";
+    String filePathtxt ="src/test/resources/filesToUpload/Cydeo_logo";
     String fullPathtxt = projectPath+"/"+filePathtxt;
 
     @When("user click on moreTab")
@@ -56,7 +56,7 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     @Then("user should see uploaded file or image under the text box")
     public void user_should_see_uploaded_file_or_image_under_the_text_box() {
         String actualUploadFileOrImageName = uploadFilesAndPicturesPage.uploadedFileOrImageUnderTheTextBox.getText();
-        String expectedUploadFileOrImageName = "floppydisk (1).jpg";
+        String expectedUploadFileOrImageName = "Cydeo_logo";
 
         System.out.println("actualUploadFileOrImageName = " + actualUploadFileOrImageName);
         System.out.println("expectedUploadFileOrImageName = " + expectedUploadFileOrImageName);
