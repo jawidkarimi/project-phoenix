@@ -17,4 +17,9 @@ public class EmployeesPage {
     @FindBy(className = "main-buttons-item-text-title")
     public List<WebElement> employeesModule;
 
+    @FindBy (id = "pagetitle")
+    public WebElement companyStructureText;
+
+
+
 }
