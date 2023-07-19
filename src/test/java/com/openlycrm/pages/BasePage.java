@@ -9,7 +9,7 @@ public abstract class BasePage {
     @FindBy(id = "user-name")
     public WebElement profileName;
 
-    @FindBy (className = "menu-popup-item-text")
+    @FindBy (xpath = "//span[contains(@class,'menu-popup-item-text')]")
     public List<WebElement> profileOptions;
 
     @FindBy (xpath = "//span[normalize-space()='Log out']")
@@ -80,6 +80,12 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//span[normalize-space()='My Profile']")
     public WebElement myProfileButton;
+
+
+    @FindBy(xpath = "//div[@class='user-block']")
+    public WebElement profileButton;
+
+
 
 
 
