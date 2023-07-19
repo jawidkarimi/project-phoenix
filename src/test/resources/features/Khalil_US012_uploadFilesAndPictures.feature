@@ -3,10 +3,11 @@ Feature: Upload files and pictures feature
   User Story:
   As a user, I should be able to upload files and pictures while sending appreciation
 
+  @Khalil
   Scenario: User should be able to upload files and pictures. Supported file formats .pdf, .txt, .jpeg, .png, .docx
     Given user is on the home page
-    When user click on MORE
-    And user click on Appreciation
+    When user click on moreTab
+    And user click on appreciationButton
     And user click on upload files icon
     And user click on upload files and images icon
     And user upload the file or image
@@ -14,8 +15,8 @@ Feature: Upload files and pictures feature
 
   Scenario: User should be able to insert the files and images into the text
     Given user is on the home page
-    When user click on MORE
-    And user click on Appreciation
+    When user click on moreTab
+    And user click on appreciationButton
     And user click on upload files icon
     And user click on upload files and images icon
     And user upload the file or image
@@ -24,8 +25,8 @@ Feature: Upload files and pictures feature
 
   Scenario: User should be able to remove files and images at any time before sending
     Given user is on the home page
-    When user click on MORE
-    And user click on Appreciation
+    When user click on moreTab
+    And user click on appreciationButton
     And user click on upload files icon
     And user click on upload files and images icon
     And user upload the file or image

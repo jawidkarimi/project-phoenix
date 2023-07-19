@@ -1,17 +1,22 @@
 package com.openlycrm.step_definitions;
 
+import com.openlycrm.pages.Khalil_UploadFilesAndPicturesPage;
+import com.openlycrm.pages.LoginPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Khalil_US012_UploadFilesAndPicturesStepDefs {
 
-    @When("user click on MORE")
+    LoginPage loginPage = new LoginPage();
+    Khalil_UploadFilesAndPicturesPage uploadFilesAndPicturesPage = new Khalil_UploadFilesAndPicturesPage();
+
+    @When("user click on moreTab")
     public void user_click_on_more() {
-
+        loginPage.moreTab.click();
     }
-    @When("user click on Appreciation")
+    @When("user click on appreciationButton")
     public void user_click_on_appreciation() {
-
+        uploadFilesAndPicturesPage.appreciationButton.click();
     }
     @When("user click on upload files icon")
     public void user_click_on_upload_files_icon() {
