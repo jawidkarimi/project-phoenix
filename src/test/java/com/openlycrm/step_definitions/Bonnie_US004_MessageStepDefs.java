@@ -13,16 +13,9 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Bonnie_US004_MessageStepDefs {
 
-    LoginPage loginPage = new LoginPage();
     MessagePage messagePage = new MessagePage();
     String textMessage = "Hello everyone!";
     Actions action = new Actions(Driver.getDriver());
-
-    @Given("user is on the home page")
-    public void user_is_on_the_home_page() {
-
-        loginPage.login();
-    }
 
     @When("user clicks on Message tab")
     public void user_clicks_on_message_tab() {
