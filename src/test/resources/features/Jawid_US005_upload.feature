@@ -10,7 +10,7 @@ Feature: upload file verification
     And user click on insert button
     And user click on send button
     Then user sees the same file is uploaded
-  @smoke
+  @smoke @wip
   Scenario: verify delete x option is enabled after the file is attached
     Given user is on the home page
     When user click on message
