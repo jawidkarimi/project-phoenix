@@ -13,17 +13,10 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Bonnie_US004_MessageStepDefs {
 
-    LoginPage loginPage = new LoginPage();
     MessagePage messagePage = new MessagePage();
     String textMessage = "Hello everyone!";
     Actions action = new Actions(Driver.getDriver());
-    WebDriver driver;
 
-    @Given("user is on the login page and signs in")
-    public void user_is_on_the_login_page_and_signs_in() {
-
-        loginPage.login();
-    }
     @When("user clicks on Message tab")
     public void user_clicks_on_message_tab() {
 
@@ -31,6 +24,7 @@ public class Bonnie_US004_MessageStepDefs {
         BrowserUtils.waitFor(5);
 
     }
+
     @When("user writes a message in the text box")
     public void user_writes_a_message_in_the_text_box() {
 
@@ -41,6 +35,7 @@ public class Bonnie_US004_MessageStepDefs {
         action.sendKeys(textMessage).perform();
 
     }
+
     @When("user verifies All employees is selected")
     public void user_verifies_all_employees_is_selected() {
 
@@ -48,6 +43,7 @@ public class Bonnie_US004_MessageStepDefs {
 
         //BrowserUtils.verifyElementDisplayed(messagePage.allEmployeesText);
     }
+
     @When("user clicks send button")
     public void user_clicks_send_button() {
 
@@ -66,7 +62,7 @@ public class Bonnie_US004_MessageStepDefs {
         String expectedTitleError = "The message title is not specified";
         String actualTitleError = messagePage.messageTitleError.getText();
 
-        Assert.assertEquals(actualTitleError,expectedTitleError);
+        Assert.assertEquals(actualTitleError, expectedTitleError);
     }
 
     @When("user clears All employees from recipient field")
@@ -81,6 +77,6 @@ public class Bonnie_US004_MessageStepDefs {
         String expectedSpecifyPersonError = "Please specify at least one person.";
         String actualSpecifyPersonError = messagePage.specifyOnePersonError.getText();
 
-        Assert.assertEquals(actualSpecifyPersonError,expectedSpecifyPersonError);
+        Assert.assertEquals(actualSpecifyPersonError, expectedSpecifyPersonError);
     }
 }

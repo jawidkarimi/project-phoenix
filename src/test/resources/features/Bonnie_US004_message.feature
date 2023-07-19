@@ -5,8 +5,7 @@ Feature: Send messages on Message tab under Active Stream
   As a user, I should be able to send messages by clicking on Message tab under Active Stream.
 
   Background: User login
-    Given user is on the login page and signs in
-
+    Given user is on the home page
 
   Scenario: Send message by filling out the mandatory fields
     When user clicks on Message tab
