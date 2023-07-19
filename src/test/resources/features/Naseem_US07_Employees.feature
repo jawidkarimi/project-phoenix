@@ -4,7 +4,7 @@ Feature:Access Employees Page
   As a user, I want to access the Employees page.
 
 
-  @smoke
+  @Employee
   Scenario:Access Employees Page
     Given the user sign on the login page
     Then user Verify seen Employees button after login
