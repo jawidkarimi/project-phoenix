@@ -2,7 +2,6 @@ package com.openlycrm.step_definitions;
 
 import com.openlycrm.pages.AppreciationPage;
 import com.openlycrm.pages.BasePage;
-import com.openlycrm.pages.EmployeesPage;
 import com.openlycrm.pages.LoginPage;
 import com.openlycrm.utilities.BrowserUtils;
 import com.openlycrm.utilities.Driver;
@@ -95,7 +94,7 @@ public class Ahmed_US011_AppreciationStepDefs extends BasePage{
 //        action.moveByOffset(xCoordinate,yCoordinate).perform();
         action.sendKeys(textmessage).perform();
 
-        BrowserUtils.waitFor(10);
+      //  BrowserUtils.waitFor(10);
     }
 
     @Then("user should uncheck All employees")
@@ -110,13 +109,13 @@ public class Ahmed_US011_AppreciationStepDefs extends BasePage{
     public void userClicksSend() {
 
         appreciationPage.sendButton.click();
-        BrowserUtils.sleep(5);
+        BrowserUtils.waitFor(10);
     }
 
     @Then("user should see error saying Please specify at least one person")
     public void userShouldSeeErrorSayingPleaseSpecifyAtLeastOnePerson() {
         BrowserUtils.waitFor(10);
-////        Assert.assertTrue(appreciationPage.specifyOnePersonError.isDisplayed());
+       //Assert.assertTrue(appreciationPage.specifyOnePersonError.isDisplayed());
 ////        BrowserUtils.waitFor(10);
 //        String messageDisplayed = appreciationPage.specifyOnePersonError.getText();
 //        String expectedText = "The message title is not specified.";
