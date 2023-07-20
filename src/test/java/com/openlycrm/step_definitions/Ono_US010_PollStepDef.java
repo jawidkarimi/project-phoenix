@@ -23,10 +23,7 @@ public class Ono_US010_PollStepDef extends BasePage {
 
     @Then("user writes a title")
     public void user_writes_a_title() {
-        int xCoordinate = 500;
-        int yCoordinate = 200;
 
-        action.moveByOffset(xCoordinate, yCoordinate).perform();
         action.sendKeys("Poll Title").perform();
     }
 
@@ -79,10 +76,10 @@ public class Ono_US010_PollStepDef extends BasePage {
 
     @Then("user click on the first answer box to the second question")
     public void user_click_on_the_first_answer_box_to_the_second_question() {
-        int xCoordinate = 500;
-        int yCoordinate = 100;
+       int xCoordinate = 500;
+       int yCoordinate = 100;
 
-        action.moveByOffset(xCoordinate, yCoordinate).perform();
+      action.moveByOffset(xCoordinate, yCoordinate).perform();
 
     }
 
