@@ -30,10 +30,11 @@ public class Naseem_US07_MessageStepDefs {
         System.out.println("employeesButton is displayed  ");
 
     }
+
     @Then("user Verify the  view the following {} modules in the Employees page.")
     public void userVerifyTheViewTheFollowingModulesInTheEmployeesPage(int integer) {
 
-       WebElement employeesButton =  Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Employees']"));
+        WebElement employeesButton = Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Employees']"));
         employeesButton.click();
     }
     ////div[@class='main-buttons-inner-container']
@@ -43,30 +44,34 @@ public class Naseem_US07_MessageStepDefs {
 
         List<WebElement> listOfCompany = Driver.getDriver().findElements(By.xpath("//span[contains(@class,'main-buttons-item-text-title')]"));
 
-        List<WebElement> listOfFiveElement= listOfCompany.stream().limit(5).collect(Collectors.toList());
+        List<WebElement> listOfFiveElement = listOfCompany.stream().limit(5).collect(Collectors.toList());
 
         for (WebElement each : listOfFiveElement) {
             Assert.assertTrue(each.isDisplayed());
             System.out.println(each.getText());
         }
-        List<WebElement>listOfThree = Driver.getDriver().findElements(By.xpath("(//span[normalize-space()='More'])[1]"));
+        List<WebElement> listOfThree = Driver.getDriver().findElements(By.xpath("(//span[normalize-space()='More'])[1]"));
     }
 
     @Then("User sees Honored Employees,Birthdays and New page")
     public void user_sees_honored_employees_birthdays_and_new_page() {
 
-     WebElement moreButton = Driver.getDriver().findElement(By.xpath("(//a[@class='main-buttons-item-link'])[6]"));
-     moreButton.click();
+        WebElement moreButton = Driver.getDriver().findElement(By.xpath("(//a[@class='main-buttons-item-link'])[6]"));
+        moreButton.click();
     }
 
 
     @Given("Verify that user view the Company Structure by default after clicking the Employees Module")
     public void verifyThatUserViewTheCompanyStructureByDefaultAfterClickingTheEmployeesModule() {
         loginPage.login();
-          WebElement employeesButton =  Driver.getDriver().findElement(By.linkText("Employees"));
-          employeesButton.click();
-        Driver.getDriver().findElement(By.xpath("//span[@id='pagetitle']"));
-        System.out.println("Company Structure is displayed by default");
+        WebElement employeesButton = Driver.getDriver().findElement(By.linkText("Employees"));
+        employeesButton.click();
+        WebElement CompanyStructure = Driver.getDriver().findElement(By.linkText("Company Structure"));
+        Assert.assertTrue(CompanyStructure.isDisplayed());
+        System.out.println("CompanyStructure is displayed = " + CompanyStructure);
+
+        // Driver.getDriver().findElement(By.xpath("//span[@id='pagetitle']")); ////this is second Option to find CompanyStructure
+       // System.out.println("Company Structure is displayed by default");
 
 
 
@@ -120,28 +125,20 @@ public class Naseem_US07_MessageStepDefs {
 */
 
 
-
-
-      //  WebElement employeesButton =  Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Employees']"));
-      //  employeesButton.click();
-       // String actualTitle = Driver.getDriver().getTitle();
-      //  String expectedTitle = "Company Structure";
-     //  Assert.assertTrue(expectedTitle,true);
-
-
-    }
-
-
+        //  WebElement employeesButton =  Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Employees']"));
+        //  employeesButton.click();
+        // String actualTitle = Driver.getDriver().getTitle();
+        //  String expectedTitle = "Company Structure";
+        //  Assert.assertTrue(expectedTitle,true);
 
 
     }
 
 
+}
 
 
-
-
-   ////div[@id='top_menu_id_company'] this locator for all bars of employees
+////div[@id='top_menu_id_company'] this locator for all bars of employees
 
 
 
