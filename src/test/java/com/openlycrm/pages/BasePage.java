@@ -5,7 +5,6 @@ package com.openlycrm.pages;
 
 import com.openlycrm.utilities.BrowserUtils;
 import com.openlycrm.utilities.Driver;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -120,11 +119,6 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//span[normalize-space()='My Profile']")
     public WebElement myProfileButton;
-
-
-
-
-
 
 
 
