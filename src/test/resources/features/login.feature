@@ -35,22 +35,11 @@ Feature: Default
 	Scenario Outline: Login with empty username or password
 		When the user login with empty "<username>","<password>"
 		Then The user should see the "Please fill out this field" error message
-		
-		Examples:
-		| username | password |
-		| wrongUserName | |
-		| | wrongPassword |	
 
-	
-	@B29G39-209
-	Scenario Outline: Login with invalid empty username or password
-		When the user login with empty "<username>","<password>"
-		Then The user should see the "Please fill out this field" error message
-		
 		Examples:
-		| username | password |
-		| wrongUserName | |
-		| | wrongPassword |	
+			| username      | password      |
+			| wrongUserName |               |
+			|               | wrongPassword |
 
 	
 	@B29G39-210

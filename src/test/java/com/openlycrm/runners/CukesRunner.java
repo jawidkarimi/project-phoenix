@@ -8,15 +8,15 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "json:target/cucumber.json",
-                "html:target/cucumber-reports.html",
+                "html:target/cucumber-reports.html"
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features",
-        glue = "com/openlycrm/step_definitions",
-        dryRun = false,
+        glue = "comm/openlycrm/step_definitions",
+        dryRun = true,
 
-        tags = "@qasaye",
+        tags = "Jawid",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
