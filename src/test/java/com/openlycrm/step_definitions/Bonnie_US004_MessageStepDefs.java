@@ -28,10 +28,10 @@ public class Bonnie_US004_MessageStepDefs {
     @When("user writes a message in the text box")
     public void user_writes_a_message_in_the_text_box() {
 
-        int xCoordinate = 500;
-        int yCoordinate = 200;
+        //int xCoordinate = 500;
+        //int yCoordinate = 200;
 
-        action.moveByOffset(xCoordinate, yCoordinate).perform();
+        //action.moveByOffset(xCoordinate, yCoordinate).perform();
         action.sendKeys(textMessage).perform();
 
     }
