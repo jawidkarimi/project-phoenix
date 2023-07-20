@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         glue = "com/openlycrm/step_definitions",
         dryRun = false,
 
-        tags = "@smoke",
+        tags = "@B29G39-189",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}

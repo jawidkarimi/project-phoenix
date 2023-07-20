@@ -51,7 +51,7 @@ public class LoginPage extends BasePage{
     }
 
     /**
-     * Just provide the userType like: hr, hr or mk
+     * Just provide the userType like: hr, hd or mk
      * @param userType
      */
     public void login(String userType) {
