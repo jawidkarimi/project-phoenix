@@ -78,6 +78,8 @@ public abstract class BasePage {
     @FindBy (xpath = "//span[normalize-space()='Employees']")
     public WebElement employeesPageButton;
 
+    @FindBy (xpath = "//span[text()='All employees']")
+    public WebElement allEmployeesText;
     @FindBy (className = "main-buttons-item-text-title")
     public List<WebElement> employeesModule;
 
