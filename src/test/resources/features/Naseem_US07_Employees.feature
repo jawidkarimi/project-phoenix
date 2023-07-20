@@ -14,3 +14,4 @@ Feature: Default
 	@B29G39-203
 	Scenario: Verify that user view the Company Structure by default after clicking the Employees Module
 		Given Verify that user view the Company Structure by default after clicking the Employees Module
+		#updated
