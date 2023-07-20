@@ -12,7 +12,7 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     Khalil_UploadFilesAndPicturesPage uploadFilesAndPicturesPage = new Khalil_UploadFilesAndPicturesPage();
 
     String projectPath = System.getProperty("user.dir");
-    String filePathtxt ="src/test/resources/filesToUpload/Cydeo_logo";
+    String filePathtxt ="src/test/resources/filesToUpload/Cydeo_logo.jpeg";
     String fullPathtxt = projectPath+"/"+filePathtxt;
 
     @When("user click on moreTab")
