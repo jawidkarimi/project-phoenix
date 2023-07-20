@@ -77,6 +77,9 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[normalize-space()='My Profile']")
     public WebElement myProfileButton;
 
+    @FindBy (xpath = "//span[text()='All employees']")
+    public WebElement allEmployeesText;
 
-
+    @FindBy(xpath = "//div[@class='user-block']")
+    public WebElement profileButton;
 }

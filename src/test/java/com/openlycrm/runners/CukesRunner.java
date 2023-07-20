@@ -14,9 +14,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/openlycrm/step_definitions",
-        dryRun = false,
+        dryRun = true,
 
-        tags = "@B29G39-189",
+        tags = "@wip",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
