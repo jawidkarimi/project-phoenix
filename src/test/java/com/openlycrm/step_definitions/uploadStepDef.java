@@ -54,16 +54,13 @@ public class uploadStepDef {
     public void user_upload_the_file() {
 
         messagePage.uploadFilesAndImagesLink.sendKeys(fullPathtxt);
-        messagePage.uploadFilesAndImagesLink.sendKeys("abcd");
 
     }
 
     @When("user click on insert button")
     public void user_click_on_insert_button() {
         BrowserUtils.waitForInvisibilityOf(messagePage.loadingBarr);
-        //messagePage.insertInText.click();
-
-        messagePage.hashCode();
+        messagePage.insertInText.click();
     }
 
     @When("user click on send button")

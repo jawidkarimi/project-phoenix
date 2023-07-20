@@ -13,10 +13,10 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features",
-        glue = "comm/openlycrm/step_definitions",
-        dryRun = true,
+        glue = "com/openlycrm/step_definitions",
+        dryRun = false,
 
-        tags = "Jawid",
+        tags = "@smoke",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
