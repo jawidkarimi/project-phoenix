@@ -53,6 +53,7 @@ public class Senai_US006_LinkStepDefs extends LoginPage {
     public void user_click_on_message_functionality() {
 
         linkPage.messageButton.click();
+        //linkPage.Messagebutton.click();
     }
 
     @Then("user should see a link functionality")
