@@ -55,6 +55,9 @@ public class LinkPage extends BasePage {
     @FindBy(linkText = "this text in order for test")
     public WebElement linkTextInBody;
 
+    @FindBy(xpath = "//*[@id=\"feed-add-post-form-tab-message\"]/span")
+    public WebElement Messagebutton;
+
     //#bx\-b\-link\-blogPostForm
 
     // //input[@id='linkidPostFormLHE_blogPostForm-text'
@@ -64,4 +67,5 @@ public class LinkPage extends BasePage {
 ////input[@placeholder='Link text']
     // //*[@id="bx-admin-prefix"]
 
+    //*[@id="feed-add-post-form-tab-message"]/span
 }

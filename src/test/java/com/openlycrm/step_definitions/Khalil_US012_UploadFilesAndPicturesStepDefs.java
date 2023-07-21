@@ -1,6 +1,7 @@
 package com.openlycrm.step_definitions;
 
 import com.openlycrm.pages.Khalil_UploadFilesAndPicturesPage;
+
 import com.openlycrm.pages.LoginPage;
 import com.openlycrm.utilities.BrowserUtils;
 import com.openlycrm.utilities.Driver;
@@ -8,6 +9,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+
+import com.openlycrm.pages.LoginPage; 
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
+
 import org.openqa.selenium.NoSuchElementException;
 
 public class Khalil_US012_UploadFilesAndPicturesStepDefs {
@@ -48,6 +55,20 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     @When("user click on the X icon")
     public void user_click_on_the_x_icon() {
         uploadFilesAndPicturesPage.theXIcon.click();
+
+
+    }
+    @Then("user should not see file or image in the text box")
+    public void user_should_not_see_file_or_image_in_the_text_box() {
+              try {
+                  Assert.assertFalse("False is expected: ", uploadFilesAndPicturesPage.fileOrImageInTheTextBox.isDisplayed());
+            }catch (NoSuchElementException e){
+                  e.printStackTrace();
+              }
+
+        uploadFilesAndPicturesPage.emptyTextBox.isDisplayed();
+       // Assert.assertFalse(true);
+
     }
 
     @Then("user should see uploaded file or image under the text box")
@@ -63,6 +84,9 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
 
     @Then("user should see file or image in the text box")
     public void user_should_see_file_or_image_in_the_text_box() {
+
+        uploadFilesAndPicturesPage.fileOrImageInTheTextBox.isDisplayed();
+
         uploadFilesAndPicturesPage.inText.isDisplayed();
     }
 
