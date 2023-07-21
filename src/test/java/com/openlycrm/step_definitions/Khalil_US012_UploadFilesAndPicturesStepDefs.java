@@ -15,6 +15,7 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     String filePathtxt ="src/test/resources/filesToUpload/Cydeo_logo.jpeg";
     String fullPathtxt = projectPath+"/"+filePathtxt;
 
+
     @When("user click on moreTab")
     public void user_click_on_more() {
 
@@ -47,13 +48,13 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     }
     @Then("user should not see file or image in the text box")
     public void user_should_not_see_file_or_image_in_the_text_box() {
-        uploadFilesAndPicturesPage.fileOrImageInTheTextBox.isDisplayed();
-
+        uploadFilesAndPicturesPage.emptyTextBox.isDisplayed();
+       // Assert.assertFalse(true);
     }
     @Then("user should see uploaded file or image under the text box")
     public void user_should_see_uploaded_file_or_image_under_the_text_box() {
         String actualUploadFileOrImageName = uploadFilesAndPicturesPage.uploadedFileOrImageUnderTheTextBox.getText();
-        String expectedUploadFileOrImageName = "Cydeo";
+        String expectedUploadFileOrImageName = "Cydeo_logo";
 
         System.out.println("actualUploadFileOrImageName = " + actualUploadFileOrImageName);
         System.out.println("expectedUploadFileOrImageName = " + expectedUploadFileOrImageName);
@@ -63,7 +64,7 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     }
     @Then("user should see file or image in the text box")
     public void user_should_see_file_or_image_in_the_text_box() {
-        uploadFilesAndPicturesPage.fileOrImageInTheTextBox.isDisplayed();
+        uploadFilesAndPicturesPage.inText.isDisplayed();
 
 
     }
