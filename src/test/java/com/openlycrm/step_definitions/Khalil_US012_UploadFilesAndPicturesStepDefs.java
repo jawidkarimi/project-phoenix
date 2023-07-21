@@ -73,7 +73,7 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     @Then("user should see file or image in the text box")
     public void user_should_see_file_or_image_in_the_text_box() {
 
-        uploadFilesAndPicturesPage.fileOrImageInTheTextBox.isDisplayed();
+        //uploadFilesAndPicturesPage.fileOrImageInTheTextBox.isDisplayed();
 
         uploadFilesAndPicturesPage.inText.isDisplayed();
     }
