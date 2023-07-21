@@ -29,13 +29,10 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     public void user_click_on_upload_files_icon() {
         uploadFilesAndPicturesPage.uploadFilesIcon.click();
     }
-    @When("user click on upload files and images icon")
-    public void user_click_on_upload_files_and_images_icon() {
-       uploadFilesAndPicturesPage.uploadFilesAndImagesIcon.sendKeys(fullPathtxt);
-    }
+
     @When("user upload the file or image")
     public void user_upload_the_file_or_image() {
-
+        uploadFilesAndPicturesPage.uploadFilesAndImagesIcon.sendKeys(fullPathtxt);
 
     }
     @When("user click on Insert in text icon")
@@ -56,12 +53,12 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     @Then("user should see uploaded file or image under the text box")
     public void user_should_see_uploaded_file_or_image_under_the_text_box() {
         String actualUploadFileOrImageName = uploadFilesAndPicturesPage.uploadedFileOrImageUnderTheTextBox.getText();
-        String expectedUploadFileOrImageName = "Cydeo_logo";
+        String expectedUploadFileOrImageName = "Cydeo";
 
         System.out.println("actualUploadFileOrImageName = " + actualUploadFileOrImageName);
         System.out.println("expectedUploadFileOrImageName = " + expectedUploadFileOrImageName);
 
-        Assert.assertTrue(actualUploadFileOrImageName.contains(expectedUploadFileOrImageName));
+       Assert.assertTrue(actualUploadFileOrImageName.contains(expectedUploadFileOrImageName));
 
     }
     @Then("user should see file or image in the text box")
