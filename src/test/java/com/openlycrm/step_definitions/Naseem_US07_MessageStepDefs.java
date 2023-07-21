@@ -50,7 +50,6 @@ public class Naseem_US07_MessageStepDefs {
             Assert.assertTrue(each.isDisplayed());
             System.out.println(each.getText());
         }
-        List<WebElement> listOfThree = Driver.getDriver().findElements(By.xpath("(//span[normalize-space()='More'])[1]"));
     }
 
     @Then("User sees Honored Employees,Birthdays and New page")
@@ -58,7 +57,16 @@ public class Naseem_US07_MessageStepDefs {
 
         WebElement moreButton = Driver.getDriver().findElement(By.xpath("(//a[@class='main-buttons-item-link'])[6]"));
         moreButton.click();
+        List<WebElement> listOfThree = Driver.getDriver().findElements(By.xpath("(//span[normalize-space()='More'])[1]"));
+        for (WebElement each : listOfThree) {
+            Assert.assertTrue(each.isDisplayed());
+            System.out.println(each.getText());
+        }
+
     }
+
+
+
 
 
     @Given("Verify that user view the Company Structure by default after clicking the Employees Module")
