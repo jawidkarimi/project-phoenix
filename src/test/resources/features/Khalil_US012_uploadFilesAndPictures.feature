@@ -31,4 +31,4 @@ Feature: Upload files and pictures feature
     And user upload the file or image
     And user click on Insert in text icon
     And user click on the X icon
-   # Then user should not see file or image in the text box
+    Then user should not see file or image in the text box
