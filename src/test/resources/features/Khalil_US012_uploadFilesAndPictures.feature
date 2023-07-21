@@ -3,7 +3,7 @@ Feature: Upload files and pictures feature
   User Story:
   As a user, I should be able to upload files and pictures while sending appreciation
 
-
+  @Khalil
   Scenario: User should be able to upload files and pictures. Supported file formats .pdf, .txt, .jpeg, .png, .docx
     Given user is on the home page
     When user click on moreTab
@@ -12,6 +12,7 @@ Feature: Upload files and pictures feature
     And user upload the file or image
     Then user should see uploaded file or image under the text box
 
+  @Khalil
   Scenario: User should be able to insert the files and images into the text
     Given user is on the home page
     When user click on moreTab
