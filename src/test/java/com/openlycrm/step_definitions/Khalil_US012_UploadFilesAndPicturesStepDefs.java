@@ -2,9 +2,13 @@ package com.openlycrm.step_definitions;
 
 import com.openlycrm.pages.Khalil_UploadFilesAndPicturesPage;
 import com.openlycrm.pages.LoginPage;
+import com.openlycrm.utilities.BrowserUtils;
+import com.openlycrm.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 
 public class Khalil_US012_UploadFilesAndPicturesStepDefs {
 
@@ -18,14 +22,14 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
 
     @When("user click on moreTab")
     public void user_click_on_more() {
-
         loginPage.moreTab.click();
     }
+
     @When("user click on appreciationButton")
     public void user_click_on_appreciation() {
-
         uploadFilesAndPicturesPage.appreciationButton.click();
     }
+
     @When("user click on upload files icon")
     public void user_click_on_upload_files_icon() {
         uploadFilesAndPicturesPage.uploadFilesIcon.click();
@@ -34,23 +38,18 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     @When("user upload the file or image")
     public void user_upload_the_file_or_image() {
         uploadFilesAndPicturesPage.uploadFilesAndImagesIcon.sendKeys(fullPathtxt);
-
     }
+
     @When("user click on Insert in text icon")
     public void user_click_on_insert_in_text_icon() {
         uploadFilesAndPicturesPage.insertInTextIcon.click();
-
     }
+
     @When("user click on the X icon")
     public void user_click_on_the_x_icon() {
         uploadFilesAndPicturesPage.theXIcon.click();
+    }
 
-    }
-    @Then("user should not see file or image in the text box")
-    public void user_should_not_see_file_or_image_in_the_text_box() {
-        uploadFilesAndPicturesPage.emptyTextBox.isDisplayed();
-       // Assert.assertFalse(true);
-    }
     @Then("user should see uploaded file or image under the text box")
     public void user_should_see_uploaded_file_or_image_under_the_text_box() {
         String actualUploadFileOrImageName = uploadFilesAndPicturesPage.uploadedFileOrImageUnderTheTextBox.getText();
@@ -60,14 +59,22 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
         System.out.println("expectedUploadFileOrImageName = " + expectedUploadFileOrImageName);
 
        Assert.assertTrue(actualUploadFileOrImageName.contains(expectedUploadFileOrImageName));
-
     }
+
     @Then("user should see file or image in the text box")
     public void user_should_see_file_or_image_in_the_text_box() {
         uploadFilesAndPicturesPage.inText.isDisplayed();
-
-
     }
 
+    @Then("user should not see file or image in the text box")
+    public void user_should_not_see_file_or_image_in_the_text_box() {
+
+        try {
+            Assert.assertFalse("False is expected: ", uploadFilesAndPicturesPage.fileOrImageInTheTextBox.isDisplayed());
+        }catch (NoSuchElementException e){
+            e.printStackTrace();
+        }
+
+    }
 
 }

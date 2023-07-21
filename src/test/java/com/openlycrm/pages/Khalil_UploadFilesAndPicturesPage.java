@@ -29,8 +29,6 @@ public class Khalil_UploadFilesAndPicturesPage extends BasePage {
     @FindBy(xpath = "//img[contains(@id,'bxid')]")
     public WebElement fileOrImageInTheTextBox;
 
-    @FindBy(xpath = "//body[@contenteditable='true']")
-    public WebElement emptyTextBox;
 
     @FindBy(xpath = " //*[ text()='In text']")
     public WebElement inText;
