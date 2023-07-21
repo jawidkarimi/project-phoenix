@@ -45,10 +45,10 @@ public abstract class BasePage {
     @FindBy (id = "pagetitle")
     public WebElement companyStructureText;
 
-    @FindBy(xpath = "//*[@id='feed-add-post-form-tab']")  // TODO- redo locator
+    @FindBy(xpath = "//*[@id='feed-add-post-form-tab']")  //
     public List<WebElement> activityStreamMenuBar;
 
-    @FindBy(id = "feed-add-post-form-link-text")
+   @FindBy(id = "feed-add-post-form-link-text")
     public WebElement moreTab;
 
     @FindBy(xpath = "//span[contains(text(),'Poll')]")

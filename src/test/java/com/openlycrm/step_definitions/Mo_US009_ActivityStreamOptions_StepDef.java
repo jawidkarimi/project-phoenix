@@ -1,25 +1,22 @@
 package com.openlycrm.step_definitions;
 
-import com.openlycrm.pages.ActivityStreamOptionsPage;
-import com.openlycrm.pages.BasePage;
+import com.openlycrm.pages.Mo_US009_ActivityStreamOptionsPage;
 import com.openlycrm.pages.LoginPage;
-import com.openlycrm.utilities.BrowserUtils;
 import com.openlycrm.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.messages.types.DataTable;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.junit.Assert;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ActivityStreamOptions_StepDef extends ActivityStreamOptionsPage{
+public class Mo_US009_ActivityStreamOptions_StepDef extends Mo_US009_ActivityStreamOptionsPage {
 
-    ActivityStreamOptionsPage activityStreamOptionsPage = new ActivityStreamOptionsPage();
+    Mo_US009_ActivityStreamOptionsPage activityStreamOptionsPage = new Mo_US009_ActivityStreamOptionsPage();
     LoginPage loginPage = new LoginPage();
 
     @Given("the user is on the Activity stream page")
@@ -35,16 +32,7 @@ public class ActivityStreamOptions_StepDef extends ActivityStreamOptionsPage{
       Assert.assertTrue(actualTitle.contains(expectedTitle));
     }
 
-/*
-    @Then("the user should see the following options:")
-    public void checkDisplayedOptions(List<String> expectedTabsName) {
-        List<WebElement> webElements = Driver.getDriver().findElements(By.xpath("//span[contains(@class, 'feed-add-post-form-link')]"));
-        List<String> displayedTabsName = webElements.stream().map(WebElement::getText).limit(5).collect(Collectors.toList());
 
-        System.out.println("Displayed options: " + displayedTabsName);
-        Assert.assertEquals(displayedTabsName, expectedTabsName);
-    }
-*/
 
 
    @Then("the user should see the following options:")
