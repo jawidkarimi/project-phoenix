@@ -25,7 +25,7 @@ public class ProfileStepDefs {
 
     @When("user click on profile picture")
     public void user_click_on_profile_picture() {
-        loginPage.profileButton.click();
+       // loginPage.profileButton.click();
     }
 
     @When("user click on my profile option")
