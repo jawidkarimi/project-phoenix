@@ -1,7 +1,7 @@
 package com.openlycrm.step_definitions;
 
 import com.openlycrm.pages.Khalil_UploadFilesAndPicturesPage;
-import com.openlycrm.pages.LoginPage;
+import com.openlycrm.pages.LoginPage; 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -15,6 +15,7 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     String projectPath = System.getProperty("user.dir");
     String filePathtxt ="src/test/resources/filesToUpload/Cydeo_logo.jpeg";
     String fullPathtxt = projectPath+"/"+filePathtxt;
+
 
     @When("user click on moreTab")
     public void user_click_on_more() {
@@ -53,12 +54,15 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
             }catch (NoSuchElementException e){
                   e.printStackTrace();
               }
+
+        uploadFilesAndPicturesPage.emptyTextBox.isDisplayed();
+       // Assert.assertFalse(true);
     }
 
     @Then("user should see uploaded file or image under the text box")
     public void user_should_see_uploaded_file_or_image_under_the_text_box() {
         String actualUploadFileOrImageName = uploadFilesAndPicturesPage.uploadedFileOrImageUnderTheTextBox.getText();
-        String expectedUploadFileOrImageName = "Cydeo";
+        String expectedUploadFileOrImageName = "Cydeo_logo";
 
         System.out.println("actualUploadFileOrImageName = " + actualUploadFileOrImageName);
         System.out.println("expectedUploadFileOrImageName = " + expectedUploadFileOrImageName);
@@ -70,6 +74,8 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
     public void user_should_see_file_or_image_in_the_text_box() {
 
         uploadFilesAndPicturesPage.fileOrImageInTheTextBox.isDisplayed();
+
+        uploadFilesAndPicturesPage.inText.isDisplayed();
 
 
     }
