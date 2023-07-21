@@ -58,18 +58,6 @@ public class Khalil_US012_UploadFilesAndPicturesStepDefs {
 
 
     }
-    @Then("user should not see file or image in the text box")
-    public void user_should_not_see_file_or_image_in_the_text_box() {
-              try {
-                  Assert.assertFalse("False is expected: ", uploadFilesAndPicturesPage.fileOrImageInTheTextBox.isDisplayed());
-            }catch (NoSuchElementException e){
-                  e.printStackTrace();
-              }
-
-        uploadFilesAndPicturesPage.emptyTextBox.isDisplayed();
-       // Assert.assertFalse(true);
-
-    }
 
     @Then("user should see uploaded file or image under the text box")
     public void user_should_see_uploaded_file_or_image_under_the_text_box() {
