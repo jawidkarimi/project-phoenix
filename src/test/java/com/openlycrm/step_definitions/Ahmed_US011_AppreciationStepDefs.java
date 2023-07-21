@@ -30,7 +30,7 @@ public class Ahmed_US011_AppreciationStepDefs extends BasePage{
     public void user_should_click_the_more_tab_under_the_search_box() {
 
         appreciationPage.moreTab.click();
-        BrowserUtils.waitFor(5);
+       // BrowserUtils.waitFor(5);
     }
     @Then("User should see the appreciation on drop down options")
     public void user_should_see_the_appreciation_on_drop_down_options() {
@@ -47,7 +47,7 @@ public class Ahmed_US011_AppreciationStepDefs extends BasePage{
     public void user_should_click_the_appreciation_on_the_drop_down_options() {
 
         appreciationPage.appreciationButton.click();
-        BrowserUtils.waitFor(10);
+       // BrowserUtils.waitFor(10);
     }
 
     @Given("user enters a message")
@@ -67,14 +67,14 @@ public class Ahmed_US011_AppreciationStepDefs extends BasePage{
     public void userClicksSend() {
 
         appreciationPage.sendButton.click();
-        BrowserUtils.sleep(10);
+        BrowserUtils.sleep(5);
     }
 
 
     @Then("user clicks the cancel button")
     public void userClicksTheCancelButton() {
         appreciationPage.cancelButton.click();
-        BrowserUtils.waitFor(10);
+        BrowserUtils.waitFor(5);
     }
 
 
@@ -84,7 +84,7 @@ public class Ahmed_US011_AppreciationStepDefs extends BasePage{
         appreciationPage.moreTab.click();
         appreciationPage.appreciationButton.click();
 
-        BrowserUtils.waitFor(10);
+       // BrowserUtils.waitFor(10);
     }
 
     @Then("user should see the All employees is selected")
@@ -97,7 +97,7 @@ public class Ahmed_US011_AppreciationStepDefs extends BasePage{
 //
 //        Assert.assertTrue(expectedSelected,actualSelected);
 //
-//        BrowserUtils.waitFor(10);
+        BrowserUtils.waitFor(5);
     }
 
     @Then("user should see The message title is not specified")
@@ -118,7 +118,7 @@ public class Ahmed_US011_AppreciationStepDefs extends BasePage{
         appreciationPage.closeAllEmployees.click();
 
         //BrowserUtils.waitForInvisibilityOf(closeAllEmployees);
-        // BrowserUtils.waitFor(10);
+         //BrowserUtils.waitFor(5);
     }
 
 
@@ -142,7 +142,7 @@ public class Ahmed_US011_AppreciationStepDefs extends BasePage{
         String expected = "Please specify at least one person.";
         Assert.assertTrue(expected,specifyOnePersonErrorDisplayed);
 
-        BrowserUtils.waitFor(10);
+        //BrowserUtils.waitFor(10);
 
 
     }
