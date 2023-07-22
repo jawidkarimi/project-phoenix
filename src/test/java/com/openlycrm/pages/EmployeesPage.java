@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class EmployeesPage {
+public class EmployeesPage extends BasePage {
 
    public EmployeesPage(){
 
@@ -17,9 +17,8 @@ public class EmployeesPage {
     @FindBy(className = "main-buttons-item-text-title")
     public List<WebElement> employeesModule;
 
-    @FindBy (id = "pagetitle")
+    @FindBy (xpath = "//span[@id='pagetitle']")
     public WebElement companyStructureText;
-
 
 
 }
