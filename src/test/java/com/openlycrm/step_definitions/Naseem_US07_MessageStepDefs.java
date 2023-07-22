@@ -22,6 +22,7 @@ public class Naseem_US07_MessageStepDefs {
     @Given("user click on Employees button")
     public void user_click_on_employees_button() {
         employeesPage.employeesPageButton.click();
+
     }
 
     @Then("user sees the eight main modules in employee page")
