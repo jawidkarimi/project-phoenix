@@ -51,7 +51,7 @@ public abstract class BasePage {
    @FindBy(id = "feed-add-post-form-link-text")
     public WebElement moreTab;
 
-    @FindBy(xpath = "//span[contains(text(),'Poll')]")
+    @FindBy(xpath = "//span[text()='Poll']")
     public WebElement pollButton;
 
     @FindBy(xpath = "//span[@class='feed-add-info-text']")
