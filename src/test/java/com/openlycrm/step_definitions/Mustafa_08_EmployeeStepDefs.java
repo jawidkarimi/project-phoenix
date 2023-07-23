@@ -1,46 +1,59 @@
 package com.openlycrm.step_definitions;
 
-import com.openlycrm.pages.BasePage;
-import com.openlycrm.pages.LoginPage;
 import com.openlycrm.pages.Mustafa_EmployeesPage;
-
 import com.openlycrm.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class Mustafa_08_EmployeeStepDefs extends BasePage {
+public class Mustafa_08_EmployeeStepDefs {
 
     Mustafa_EmployeesPage employeesPage = new Mustafa_EmployeesPage();
-    LoginPage loginPage = new LoginPage();
+
 
     @Given("the user is logged in")
     public void the_user_is_logged_in() {
-        loginPage.login(ConfigurationReader.getProperty("hr_username"), ConfigurationReader.getProperty("hr_password"));
+
+       // employeesPage.loginTest();
+        employeesPage.login("helpdesk");
     }
     @When("the user navigates to the Employee menu")
     public void the_user_navigates_to_the_employee_menu() {
-        employeesPage.employeesMenuItem.click();
+         employeesPage.employeesMenuItem.click();
     }
     @Then("the user can see the Company Structure header")
-    public void the_user_can_see_the_header() {
+    public void the_user_can_see_the_company_structure_header() {
+         employeesPage.seesCompanyHeader();
+    }
 
-        Assert.assertTrue(employeesPage.companyStructureTitle.isDisplayed());
+
+    @When("the HR user clicks to Add Department Button")
+    public void the_hr_user_clicks_to_add_department_button() {
+
+
+
+        employeesPage.employeesPageButton.click();
+        employeesPage.addDepartmentLink.click();
+
+    }
+
+    @Given("HR user is logged in")
+    public void hr_user_is_logged_in() {
+        employeesPage.login("hr");
     }
 
     @Given("the HR user can see the Add Department Button")
     public void the_hr_user_can_see_the_add_department_button() {
-        employeesPage.addDepartmentFunction(ConfigurationReader.getProperty("hr_username"));
+
+      Assert.assertTrue(employeesPage.addDepartmentLink.isDisplayed());
     }
-    @When("the HR user clicks to Add Department Button")
-    public void the_hr_user_clicks_to_add_department_button() {
-        employeesPage.verifyAddDepartmentButtonVisibility(ConfigurationReader.getProperty("hr_username").substring(0, 1));
-    }
+
+
     @Then("the HR user can see the added Department in the Employees Page")
     public void the_hr_user_can_see_the_added_department_in_the_employees_page() {
 
-        employeesPage.addDepartmentFunction(ConfigurationReader.getProperty("hr_username").substring(0, 1));
+        employeesPage.addButtonFunctions("hr");
+        employeesPage.logout();
     }
-
 }
