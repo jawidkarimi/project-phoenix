@@ -1,28 +1,17 @@
-@Employee
-Feature:Access Employees Page
+@naseem
+Feature: Verification on of Employees page
 
-  User Story:
-  As a user, I want to access the Employees page.
+	US1668: As a user, I want to access the Employees page.
 
+	Background: User login
+		Given user is on the home page
+	
+	@B29G39-202 @wip
+	Scenario: Verification of 8 main modules
+		    Given user click on Employees button
+		    Then user sees the eight main modules in employee page
 
-  @Employee
-  Scenario:Access Employees Page
-    Given the user sign on the login page
-    Then user Verify seen Employees button after login
-    Then user Verify the  view the following 8 modules in the Employees page.
-    Then  User can see Company Structure ,Find Employee,Telephone Directory,Staff Changes and Efficiency Report
-    Then User sees Honored Employees,Birthdays and New page
-
-  Scenario: Company Structure Name
-    Given Verify that user view the Company Structure by default after clicking the Employees Module
-
-       # Then User sees Find Employee
-      # Then User can see Telephone Directory
-      # And User sees Staff Changes
-     #And User sees Efficiency Report
-    # And User sees Birthdays
-   # Then User sees New page
-
-
-
-
+	@B29G39-203
+	Scenario: Verification of default page under employees page
+		Given user click on Employees button
+		Then user sees Company Structure page is displayed as default by default

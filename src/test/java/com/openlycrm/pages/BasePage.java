@@ -1,7 +1,5 @@
 package com.openlycrm.pages;
 
-import com.openlycrm.utilities.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import java.util.List;
@@ -45,9 +43,15 @@ public abstract class BasePage {
     public List<WebElement> employeesModule;
 
     @FindBy (id = "pagetitle")
-    public WebElement companyStructureText;;
+    public WebElement companyStructureText;
 
-    @FindBy(xpath = "//span[contains(text(),'Poll')]")
+    @FindBy(xpath = "//*[@id='feed-add-post-form-tab']")  //
+    public List<WebElement> activityStreamMenuBar;
+
+   @FindBy(id = "feed-add-post-form-link-text")
+    public WebElement moreTab;
+
+    @FindBy(xpath = "//span[text()='Poll']")
     public WebElement pollButton;
 
     @FindBy(xpath = "//span[@class='feed-add-info-text']")

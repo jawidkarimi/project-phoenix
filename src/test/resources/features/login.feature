@@ -1,10 +1,15 @@
-@login
-Feature: Users should be able to login
+@login @smoke
+Feature: crm login feature
 
-  Background: User is already in the log in page
-    Given the user is on the login page
+  User Story:
 
-  @wip
+  As a user, I should be able to login with valid credentials and should land on the home page after successful login.
+  Users types are: HR, Marketing and Helpdesk
+
+  Background: For all scenarios user is on the login page of the crm
+    Given user is on the login page of the crm
+
+
   Scenario Outline: login with valid credentials
     When user login with valid "<username>" and "<password>"
     Then user should see the homepage
@@ -45,5 +50,15 @@ Feature: Users should be able to login
   Scenario: remember me check box validation
     Then user sees remember me check box
     And remember me is clickable
+
+
+
+
+
+
+
+
+
+
 
 
