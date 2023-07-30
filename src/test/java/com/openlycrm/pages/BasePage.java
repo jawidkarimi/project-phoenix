@@ -4,7 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
-public abstract class BasePage {
+public abstract class
+
+BasePage {
 
     @FindBy(id = "user-name")
     public WebElement profileName;
